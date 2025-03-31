@@ -62,4 +62,7 @@ nav:
         - running-jobs/interactive-jobs.md
         - running-jobs/batch-jobs.md
         - running-jobs/hardware-requests.md
+    - Roar restricted:
+        - restricted/rr-getting-started.md
+        - restricted/rr-handling-data.md
              

@@ -22,8 +22,8 @@ Roar consists of different parts, connected together by networks:
 
 ## Accounts
 
-To log on to Collab, you need a [login account](connecting-to-rc.md/#login-accounts).
-To work on Collab, you can use the open queue at no cost,
+To log on to Roar, you need a [login account](connecting-to-rc.md/#login-accounts).
+To work on Roar, you can use the open queue at no cost,
 which gives you access to the Portal, 
 and to batch jobs on vintage hardware.
 
@@ -39,7 +39,7 @@ and pay whether or not you use the compute time.
 
 ## Two ways to access 
 
-Roar Collab can be accessed in two ways:  via the web-based Portal <br>
+Roar can be accessed in two ways:  via the web-based Portal <br>
 <https://rcportal.hpc.psu.edu/pun/sys/dashboard> <br>
 and by "secure shell" ([`ssh`][ssh]) 
 from a terminal application.

@@ -23,7 +23,7 @@ from the Portal Interactive Desktop
 or an `ssh -X` terminal session (`thunar` at the command line).
 [thunar]: https://docs.xfce.org/xfce/thunar/start
 
-Alternatively, the [Roar Collab Portal][portal] top menu under Files/Home
+Alternatively, the [Portal][portal] top menu under Files/Home
 opens a window that enables file management
 (moving, copying, renaming, making and deleting folders).
 [portal]: https://portal.hpc.psu.edu/pun/sys/dashboard

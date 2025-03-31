@@ -92,7 +92,7 @@ or QoS = "Quality of Service" in SLURM-speak.
 (Queues are like classes of service on an airline flight:
 first, business, economy,...)
 
-Collab has five queues:  open, normal, debug, express, and interactive.  
+Roar has five queues:  open, normal, debug, express, and interactive.  
 Each serves a different purpose, and has different restrictions.
 
 | queue (QOS) | description | restrictions |

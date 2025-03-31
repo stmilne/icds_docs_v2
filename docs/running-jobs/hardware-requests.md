@@ -45,7 +45,7 @@ the command `lscpu` displays information about the CPUs;
 `nvidia-smi` displays information about the GPUs (if present).
 [salloc]: interactive-jobs.md
 
-The SLURM command [`sinfo`][sinfo] displays information about *all* Collab nodes.
+The SLURM command [`sinfo`][sinfo] displays information about *all* Roar nodes.
 Its output is more easily read with some formatting options,
 [sinfo]: https://slurm.schedmd.com/sinfo.html
 

@@ -31,7 +31,7 @@ Prices for different compute nodes are set proportional to the cost of the hardw
 and at a level competitive with the cost of buying your own cluster.
 More expensive nodes cost more to use, reflecting their greater value.
 
-| node type | characteristics | credit <br> per day | allocation <br> per day |
+| node type | characteristics | credit <br> per day | allocation <br> per month |
 | ---- | ---- | ---- | ---- | 
 | basic | 4 GB/core | $0.096 | $1.81 |
 | standard | 8 GB/core + IB | $0.178 | $3.37 |

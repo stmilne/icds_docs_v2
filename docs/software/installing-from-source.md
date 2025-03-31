@@ -15,7 +15,7 @@ or may require extensive modification to install missing dependent packages.
 
 If you have worked with a laptop running Linux,
 one important difference between installing software 
-on your laptop and on Collab is **no root access**.
+on your laptop and on Roar is **no root access**.
 This means you cannot:
 
 - use RPM package installers like [`yum`][yum]

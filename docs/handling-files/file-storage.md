@@ -1,6 +1,6 @@
 # File storage
 
-Files are stored on Roar Collab in a central filesystem.
+Files are stored on Roar in a central filesystem.
 Users have access to four directories:  home, work, scratch, and group.
 These have different purposes:
 

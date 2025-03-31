@@ -23,7 +23,7 @@ and list approximate transfer rates for large files.
 
 The [Roar Portal][portal] top menu under Files/Home
 opens a window that enables convenient file transfer 
-between Collab and your laptop.
+between Roar and your laptop.
 [portal]: https://rcportal.hpc.psu.edu/pun/sys/dashboard
 With this utility, small files can be conveniently moved, edited, uploaded, and downloaded. 
 Do not use this method for moving large (>100 GB) files.
@@ -46,7 +46,7 @@ and perform file transfers.
 ## Globus
 
 Globus is a web-based tool designed for robust transfers of large files.
-It can move files from Roar Collab to filesystems outside Penn State,
+It can move files from Roar to filesystems outside Penn State,
 including our OneDrive accounts.
 Globus is interactive, but time-consuming file transfers 
 can be submitted as batch jobs.
@@ -80,7 +80,7 @@ sftp <username>@<address>
 ```
 where `<address>` is the address of a "remote machine",
 and `<username>` is your userid on that machine.
-For sftp *to* Collab, the address is `submit.hpc.psu.edu`,
+For sftp *to* Roar, the address is `submit.hpc.psu.edu`,
 the same as for ssh logon.
 
 Just as for ssh logon, you will be prompted 
@@ -104,7 +104,7 @@ with "local" versions of these commands, `lcd` and `lls`.
 
 !!! tip ""
      "Graphical" sftp clients for your laptop
-     can be used for file transfer to Collab, 
+     can be used for file transfer to Roar, 
      as well as to OneDrive or other cloud storage providers.
      Two popular options for both OS X and Windows are
      [Cyberduck][cyberduck] and [FileZilla][filezilla].

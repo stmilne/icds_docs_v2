@@ -76,7 +76,7 @@ your `.bashrc` file must be executed.  This can be done in one of three ways:
 ## Anaconda on Portal
 
 Special considerations apply if you want to use conda environments you have defined,
-for Python or R for example, in an interactive session launched from the Collab Portal.
+for Python or R for example, in an interactive session launched from the Portal.
 
 ### Jupyter Server
 

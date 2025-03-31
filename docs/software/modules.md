@@ -1,6 +1,6 @@
 # Software modules
 
-Collab provides many different applications in its software stack,
+Roar provides many different applications in its software stack,
 which consists of two parts:
 
 - preloaded software, available immediately on login;

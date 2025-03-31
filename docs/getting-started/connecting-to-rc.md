@@ -1,81 +1,108 @@
-# Connecting to Roar Collab
+# Connecting
 
-## Setting up a Login Account
+## Login accounts
 
-Access to Roar Collab (RC) requires a login account.
-All RC users have access to user-level [storage space](../handling-data/file-storage.md/#quotas),
+Access to Roar requires a login account.
+All users have access to user-level [storage space](../handling-data/file-storage.md/#quotas),
 and free access to the open queue.
 
-For access to the restricted system, please see the [Roar Restricted Addendum](../roar-restricted/rr-getting-started.md).
-
-Anyone with a Penn State access ID can request an account on Roar Collab.
+Anyone with a Penn State access ID can [request an account on Roar](https://accounts.hpc.psu.edu/users/).
 Students and postdocs must be sponsored by a Penn State faculty member (their supervisor, advisor or collaborator). 
+Once approved, you can connect to Roar using your PSU credentials.
 
-To request an account, fill out the [account request form](https://accounts.hpc.psu.edu/users/).
-Once approved, you can connect to RC using your PSU credentials.
+For external collaborators, 
+Penn State faculty can set up [sponsored access accounts][sponsored],
+which provides them with a Penn State access account and email address.
+Once the sponsored account is active, a Roar account can be requested.
+[sponsored]: https://security.psu.edu/services/penn-state-accts/sponsored/
 
-## Non-PSU Collaborators
+## Portal
 
-Penn State faculty can set up [sponsored access accounts](https://security.psu.edu/services/penn-state-accts/sponsored/) 
-for external collaborators, which provides them with a Penn State access account and email address.
-Once the sponsored access account is active, a Roar Collab account can be requested as described above.
+For users who are unfamiliar with the Linux command line,
+or who prefer an interactive graphical interface, 
+the [Web Portal](https://portal.hpc.psu.edu) (which runs Open OnDemand) provides:
 
-## Connecting via the Web Portal
+ - a file browser, for basic file editing and transfer
+ - a graphical desktop environment with a familiar "look and feel"
+ - software such as ANSYS, COMSOL, MATLAB, VS Code, Jupyter, and RStudio
+   
+For advanced tasks, Portal users can access the command line interface under the "Clusters" menu.
 
-For those who prefer an interactive "point and click" interface, the Web Portal (which runs Open OnDemand) provides:
+## SSH
 
- - a web-based file browser, for basic file editing and transfer
- - interactive computing using graphical desktop and popular software interfaces such as ANSYS, COMSOL, MATLAB, VS Code, Jupyter, and RStudio
- - a desktop environment (the "RHEL 8 Interactive Desktop") with a "look and feel" familiar to Windows users
+Alternatively, you can access the Roar via ["secure shell" (SSH)](https://linux.die.net/man/1/ssh) 
+from a terminal application.
 
-The portal provides a solution for users who are not familiar with the Linux command line and who want the interactivity provided by the graphical interface.
+On Windows, use the Command Prompt (installed by default), 
+or an SSH client such as [PuTTY](https://www.putty.org) 
+or [MobaXterm](https://mobaxterm.mobatek.net/).
+On MacOS, use the Terminal (installed by default), 
+or an SSH client such as [iTerm](https://iterm2.com).
 
-Connect to the portal using your web browser at [https://portal.hpc.psu.edu]
+From the terminal, log on to a submit node using the command
+<br> `ssh <userid>@submit.hpc.psu.edu`
+<br> Authenticate using your PSU userid and password, then with multi-factor authentication (MFA),
+which confirms that you are you.
+To set up MFA, visit the [PSU accounts portal](https://accounts.psu.edu/2fa).
 
-For more advanced tasks, users can access the command line interface through the portal under the "Clusters" menu:
+## X forwarding
 
-![Cluster menu Portal Image](../img/RCPortalShell.png)
+To use any Roar application that "opens a window"
+(an  "X Window" or "X11" application), 
+you need an additional program on your laptop.
+On a Mac, this is [XQuartz](https://www.xquartz.org);
+on a PC, you need [VcXsrv](https://sourceforge.net/projects/vcxsrv/).
 
-## Connecting via SSH
+To use Roar applications that open windows, log on with
+option `-X` for "X forwarding":
+<br> `ssh -X <userid>@submit.hpc.psu.edu`
 
-Alternatively, you can access the cluster via [SSH](https://linux.die.net/man/1/ssh) from a terminal application running on your laptop.
+When you log on to Roar from off-campus,
+X Window applications can sometimes be slow to update the display;
+the [Portal](../running-jobs/portal.md)  works better in such circumstances.
 
-On Windows, use the Command Prompt included by default. Or install an external SSH client such as [PuTTY](https://www.putty.org) or [MobaXterm](https://mobaxterm.mobatek.net/);
+## Text editors
 
-On MacOS, Terminal is installed by default. But you can use an external client such as [iTerm](https://iterm2.com).
+Linux is a text-based operating system;
+programs, batch scripts, and parameter files are text files.
+To work on Linux, you need a good text editor.  There are several options.  
 
-From the Command Prompt/Terminal, log on to a submit node using the command
+`gedit` is a Windows-style text editor,
+reasonably intuitive for Windows and Mac users,
+available on the Portal Interactive Desktop
+(under Applications/Accessories/Text Editor),
+or via `ssh -X`.
 
-```
-ssh <user>@submit.hpc.psu.edu
-```
+Other Linux editors are [`emacs`][emacs]
+(under Applications/Accessories/emacs, or via `ssh -X`)
+and [`nano`][nano] (from the command line, via `ssh -X`).
+[emacs]: https://www.gnu.org/software/emacs/
+[nano]: https://www.nano-editor.org
 
-Authenticate using your PSU Credentials, then multi-factor authentication (MFA) which is often a push notification to your cell phone.
+For coding projects,
+a popular choice is [Visual Studio Code Server][vscode]
+(available as "VS Code Server" from the Portal main page).
+Not just an editor, VSCode is an Integrated Development Environment,
+that checks for errors as you type,
+runs Python code interactively, has a debugger, and so on.
+[vscode]: https://code.visualstudio.com/docs/remote/vscode-server
 
-To make changes to your MFA device or method please visit [PSU's accounts portal](https://accounts.psu.edu/2fa).
+Finally, `vi` is beloved by old-school users.
+In vi, you navigate within a file by key commands.
+vi offers powerful search-and-replace,
+and rapid navigation within the file.
+Learning vi is like touch-typing -- 
+difficult at first, but remarkably fast.  
 
-## Connecting to RR
+Tutorials for vi are available [here][vi1], [here][vi2], and [here][vi3].
+Once you know vi, [this summary][vi_summary] is useful.
+[vi1]: https://www.cs.colostate.edu/helpdocs/vi.html 
+[vi2]: http://heather.cs.ucdavis.edu/~matloff/UnixAndC/Editors/ViIntro.html
+[vi3]: http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html.  
+[vi_summary]: https://bpb-us-e1.wpmucdn.com/sites.psu.edu/dist/0/79295/files/2020/09/notes-on-vi.pdf
 
-For security reasons, Roar Restricted can only be accessed via the [RR Portal](https://rrportal.hpc.psu.edu/) using the 
-[Penn State VPN](https://pennstate.service-now.com/sp?id=kb_article_view&sysparm_article=KB0013431&sys_kb_id=24f7cdd9dbd7e0d02c4f9e74f3961967&spa=1). 
-For more details, see the [Roar Restricted Addendum](../roar-restricted/rr-getting-started.md).
+Files can be edited on the laptop and transferred to Roar.
+If you do this, you must use a text editor, not a word processor.
+On the Mac, use [BBEdit](https://www.barebones.com/products/bbedit/);
+on the PC, use [Notepad++](https://notepad-plus-plus.org).
 
-## X11 Forwarding / X Window
-
-X11 forwarding allows remote graphical applications to be displayed on a local machine via an SSH connection. 
-This is accomplished by the remote machine communicating with an XServer which runs on your local computer.
-
-To set this up:
-
-1. Install an XServer client on your local computer:
-    - MacOS: [XQuartz](https://www.xquartz.org)
-    - Windows: [VcXsrv](https://sourceforge.net/projects/vcxsrv/)
-2. Enable X11 forwarding when connecting via SSH:
-
-```
-ssh -X <user>@submit.hpc.psu.edu
-```
-
-Using X11 forwarding with a local computer that is connecting from outside of the Penn State networks can 
-result in slow or "laggy" performance. Using [Interactive Portal Jobs](../running-jobs/portal.md) 
-may provide better performance.

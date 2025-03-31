@@ -1,6 +1,4 @@
-# Before you start
-
-## Best Practices
+# Tips for beginners
 
 !!! warning "Don't use submit nodes for heavy computing."
      Submit nodes are for preparing files, submitting jobs, 
@@ -15,24 +13,34 @@
      Keep an eye on your [disk space usage](../handling-data/file-storage.md/#quotas).
 
 !!! warning "Don't waste your compute resources."
-     Start with interactive sessions to test your workflow and set up your software.
-     When starting batch processing, run smaller test jobs to make sure your code works.
-
+     Use interactive sessions to test your workflow.
+     Before a big batch job, run test jobs to make sure your code works.
 
 ## Roar uses Linux
 
-The operating system for Roar is Red Hat Enterprise Linux 8 ([RHEL8](https://docs.redhat.com/en/documentation/red_hat_enterprice_linux/8),
-a text-based operating system where users interact with the system
-by typing commands, called a command line interface (CLI). Many prefer the CLI
-interface because it is fast and responsive and many tasks can be automated with scripts.
+The operating system for Roar is Red Hat Enterprise Linux 8 ([RHEL8][rhel8]),
+a variant of Unix.
+Unix a text-based; users interact with the system by typing commands.
+Compute clusters use Linux
+in part because tasks can be automated with scripts.
+[rhel8]: https://www.redhat.com/en/documentation/red_hat_enterprice_linux/8
 
-To take full advantage of the functionality of Roar, it is recommended that one be
-familiar with navigating in the Linux CLI and capable of performing the following tasks:
+This user guide assumes familiarity with Unix,
+which any user who wants to do more than use the Portal needs to learn.
+A tutorial website for Unix can be found [here][unix_tutorial].
+[unix_tutorial]: https://www.tutorialspoint.com/unix/unix_tutorial.pdf
+The first chapter of [this book][unixphysics] is also helpful.
+An introduction to Unix
+written for research undergraduates and graduate students,
+is [here](pdf/unixGuide.pdf).
+[unixphysics]: https://www.oreilly.com/library/view/effective-computation-in/9781491901564/?sso_link=yes&sso_link_from=pennsylvania-state-university
 
- - Navigating the file system using commands such as `cd` and `ls`
- - Viewing and editing text files using commands such as `cat` and `nano`
- - Searching for files and their content using `grep` and `find`
+See also the online lesson [HPC Carpentry lesson "Introduction
+to Using the Shell in a HPC Context"](https://www.hpc-carpentry.org/hpc-shell/),
+which can be followed after [logging onto Roar](connecting-to-rc.md/#ssh).
 
-To learn more about any of the above, we recommend following the [HPC Carpentry lesson "Introduction
-to Using the Shell in a HPC Context"](https://www.hpc-carpentry.org/hpc-shell/). The lesson contents
-can be followed once [a terminal session has been establshed](connecting-to-rc.md/#connecting-via-ssh).
+
+
+
+
+

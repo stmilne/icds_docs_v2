@@ -1,18 +1,14 @@
-# Custom module Files
+# Custom modules
 
-ICDS uses the [Lmod Environment Module System](https://lmod.readthedocs.io/en/latest/). 
-This system is highly exandable and allows for the creation and use of custom module files.
-
-## Module File Structure
-
-Common components of a modulefile are:
+Within the [Lmod Environment Module System](https://lmod.readthedocs.io/en/latest/). 
+users can create and use custom module files.
+<br> Common components of a modulefile are:
 
 - **whatis():** Supplies information for `module info` and `module spider` output
 - **load():** Loads other modules when this module is loaded
-- **prepend_path():** Modifies environmental variables in the user's environment. Common ones 
-include `PATH`, `LD_LIBRARY_PATH`, and `CPATH`.
+- **prepend_path():** Modifies path variables, such as `PATH`, `LD_LIBRARY_PATH`, and `CPATH`.
 
-### Example Module File
+## Example
 
 Here is the contents of the `gromacs/2024.3` module file:
 
@@ -50,9 +46,9 @@ prepend_path('CPATH', pathJoin(base,'include'))
 prepend_path('PKG_CONFIG_PATH', pathJoin(base,'lib64/pkgconfig'))
 ```
 
-## Loading Custom modules
+## Loading custom modules
 
-The `module use` command is used to specify the location of module files:
+The `module use` command specifies the location of module files:
 
 ```
 module use <module_directory>
@@ -60,9 +56,9 @@ module use <module_directory>
 
 in which `<module_directory>` is the path to your modules.
 
-Adding the `module use` line to your `.bashrc` file will make the modules automatically accessable 
-upon login.
+Adding the `module use` line to your `.bashrc` file 
+will make the modules accessable upon login.
 
 Creating module files within group storage directories can make them accessable to all group members. 
-Ensure that the correct [file permissions](../../handling-data/managing-files/file-permissions.md) are set 
+Ensure that the correct [file permissions](../handling-files/managing-files.md#file-permissions) are set 
 to allow all group members to read and execute the module files.

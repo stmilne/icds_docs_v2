@@ -1,64 +1,63 @@
-# Using the Web Portal
+# Portal
 
-ICDS offers an interactive web portal powered by [Open OnDemand](https://openondemand.org/)
-which allows users access to graphical file handling features, graphical desktop software and
-interfaces, and popular Integrated Developer Environments (IDEs) such as Jupyter Notebooks and RStudio.
+The Roar web [Portal][portal], powered by [Open OnDemand](https://openondemand.org/),
+offers a visual desktop environment, file management, 
+and Integrated Developer Environments (IDEs) such as Jupyter and RStudio.
+[portal]: <https://portal.hpc.psu.edu>
 
-To use the Web Portal, navigate to <https://portal.hpc.psu.edu>
+## Selecting resources
 
-For an in-depth overview of Open OnDemand features, see [this tutorial video](https://youtu.be/w1hbOppyUUc?si=Ubv0ymfeZmnD7Kzr)
-developed by [The Yale Center for Research Computing](https://research.computing.yale.edu/)
+Interactive jobs on the Portal are scheduled and managed by Slurm.
+Resources to be used must be specified:
+queue, number and type of nodes, number of cores, memory (RAM), run time.
+For the casual user, the preset defaults are sufficient:
+1 node, 4 cores, 64GB, 1 hour, open queue.
 
-## Selecting Resources for Interactive Jobs
+To override these defaults, check the box "Enable advanced Slurm options",
+and type Slurm [resource directives][slurmdir] one per line into the text box.
+[slurmdir]: slurm.md#resource-directives
 
-Interactive jobs and scheduled and managed by Slurm and require resource definitions similar to
-batch jobs. This means the amount of cores, memory (RAM), and run-time need to be specified before
-jobs can be started.
-
-Most of these can be specified using the drop down and number entry fields. However, it is possible to add 
-more specialized resource requests by adding custom [directives](cli/slurm.md#slurm-resource-directives) by 
-selecting "Enable advanced Slurm options" and entering the directives into the Sbatch options text box.
-
-To avoid errors, the hardware requested must be accompanied by a compatable account, partition, and node type.
-Here are some common use cases and the necessary settings:
+Hardware you request must be compatible with the account you specify.
+If you ask for high-memory nodes, standard nodes, or GPUs, 
+you need either a credit account, or a paid allocation 
+that covers the selected hardware.
 
 To use the open partition:
 
  - Account: open
  - Sbatch options: --partition=open
 
-To use an [allocation](paid-resources/allocations.md):
+To use an [allocation](../accounts/accounts.md):
 
  - Account: your_allocation_id
  - Sbatch options: --partition=sla-prio
 
-To specify a hardware partition for [credit accounts](paid-resources/credit-accounts.md):
+To use a [credit account](../accounts/accounts.md)
+and specify a [hardware partition](../getting-started/compute-hardware.md#partitions):
 
  - Account: your_credit_account
- - Sbatch options: --partiton=hardware_partition
-
-For details regarding available hardware partitions, see [Availalbe Hardware Partitions](paid-resources/credit-accounts.md/#available-hardware-partitions)
+ - Sbatch options: --partition=hardware_partition
 
 !!! warning "All jobs must fit inside the resource limits of the partition they are running on"
-     If a job requests resources that exceed the partition limits, they will not begin.
+     If resource requests exceed the partition limits, the job will not begin.
 
 - Open queue jobs must not exceed 100 cores and 800 GB memory
 - Interactive jobs must not exceed 4 cores and 24 GB memory
-- Paid resource limits are definied by the allocation limits
+- Allocation limits are defined by the terms of the allocation
 
-## Custom Environments
+## Custom environments
 
-The Jupyter and RStudio Server Interactive Apps allow the use of custom software or environment options. 
-To utilize these, select "Use custom environment" under Environment type and enter commands there to be ran 
-once the job launches.
+Jupyter and RStudio Server allow the use of custom software or environments. 
+To use these, select "Use custom environment" under Environment type 
+and enter commands to be run when the job launches.
 
-For example, to use a custom Anaconda environment named `myenv`, the following text should be included in 
-the "Environment setup" box:
+For example, to use a custom Anaconda environment named `myenv`, 
+the "Environment setup" box should contain:
 
 ```
 module load anaconda
 conda activate myenv
 ```
 
-For more details on using Anaconda environments within your Portal jobs, please see [Anaconda on 
-Portal](../software/loading-packages/anaconda.md/#anaconda-on-portal).
+For more on using Anaconda environments in your Portal jobs, 
+see [Anaconda on Portal](../packages/anaconda.md/#anaconda-on-portal).

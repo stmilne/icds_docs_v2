@@ -2,7 +2,6 @@
 
 On Macs and PCs, powerful tools exist for finding files
 that match certain criteria, or contain certain text.
-
 Two Unix commands that provide similar capabilities 
 are [`find`][find] and [`grep`][grep].
 [find]: https://man7.org/linux/man-pages/man1/find.1.html
@@ -30,7 +29,7 @@ Here are a few examples of each.
 [grep_tutorial]: https://danielmiessler.com/p/grep/
 [find_tutorial]: https://snapshooter.com/learn/linux/find
 
-## Searching for Files (find)
+## Searching for files (find)
 
 Find all files with name that matches a pattern:
 ```
@@ -72,7 +71,7 @@ Find files of a certain extension and delete them:
 find . -name "*.trr" -exec rm -f {} +
 ```
 
-## Searching In Files (grep)
+## Searching in files (grep)
 
 In its simplest form, grep searches for a "pattern"
 in a given file or set of files:

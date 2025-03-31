@@ -1,6 +1,4 @@
-# Using Containers on RC
-
-## Overview
+# Containers
 
 Containers address the growing issue of software and dependency complexity by storing the 
 software and all its dependencies (including a minimal operating system) in a single image 
@@ -30,8 +28,7 @@ built from a definition file.
      Apptainer's documentation of the [fakeroot feature](https://apptainer.org/docs/user/main/fakeroot.html#usage).
 
 
-
-## Using Containers with Slurm
+## Containers with Slurm
 
 In a Slurm submission script, a container can be called serially using the following run line:
 
@@ -51,8 +48,7 @@ In a Slurm submission script, a container with MPI can be called using
 $ srun apptainer exec <container> <command> <args>
 ```
 
-
-## Useful Apptainer Commands
+## Apptainer commands
 
 | Command | Description |
 | ---- | ---- |

@@ -2,7 +2,7 @@
 
 To access newer hardware including GPUs, to run jobs without risk of pre-emption,
 and to run with wall times longer than the 48-hour limit on the open queue,
-users must pay for comput time.
+users must pay for compute time.
 
 There are two ways to pay for compute time on Roar:  credit accounts, and allocations.
 

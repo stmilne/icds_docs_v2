@@ -5,12 +5,12 @@
      examining results, and transferring files.
 
 !!! warning "Don't store files on scratch."
-     [Scratch is not backed up](../handling-data/file-storage.md/#quotas), 
+     [Scratch is not backed up](../handling-files/file-storage.md/#quotas), 
      and files more than 30 days old are deleted.
 
 !!! warning "Don't overrun your file storage quota."
      If you fill your allotted disk space, weird errors result.
-     Keep an eye on your [disk space usage](../handling-data/file-storage.md/#quotas).
+     Keep an eye on your [disk space usage](../handling-files/file-storage.md/#quotas).
 
 !!! warning "Don't waste your compute resources."
      Use interactive sessions to test your workflow.
@@ -32,7 +32,7 @@ A tutorial website for Unix can be found [here][unix_tutorial].
 The first chapter of [this book][unixphysics] is also helpful.
 An introduction to Unix
 written for research undergraduates and graduate students,
-is [here](pdf/unixGuide.pdf).
+is [here](../pdf/unixGuide.pdf).
 [unixphysics]: https://www.oreilly.com/library/view/effective-computation-in/9781491901564/?sso_link=yes&sso_link_from=pennsylvania-state-university
 
 See also the online lesson [HPC Carpentry lesson "Introduction

@@ -12,7 +12,7 @@ In classic Unix, these tasks are all performed with command line tools:
 -  `mv` (move)
 -  `rm` (remove)
 
-Part of learning [Linux](../../getting-started/before-you-start.md/#roar-uses-linux)
+Part of learning [Linux]()../getting-started/before-you-start.md/#roar-uses-linux)
 is becoming familiar with these commands. 
 
 If you prefer a more "graphical" user interface, two options exist.

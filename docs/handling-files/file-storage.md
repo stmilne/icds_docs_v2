@@ -84,7 +84,7 @@ which points to the directory you moved to `work`.
 To store infrequently-used files, low-cost archive storage can be purchased. 
 The [Globus][globus] web interface is the only way to access these files, 
 so access is neither quick nor convenient.
-[globus]: transferring-data/globus.md
+[globus]: transferring-files.md#globus
 
 If you store a directory that contains many files, 
 you should pack the directory into a single file with `tar`

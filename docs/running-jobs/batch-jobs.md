@@ -9,7 +9,7 @@ which runs the job when resources are available.
 ## Slurm commands
 
 On Roar, the queue manager is SLURM (Simple Linux Utility for Resource Management).  
-Besides `salloc` for interactive jobs (see [Interactive jobs](interactive-jobs.md)),
+Besides `salloc` for [interactive jobs](interactive-jobs.md)),
 the basic SLURM commands are:
 
 | Command | Effect|
@@ -34,7 +34,7 @@ To cancel the job, execute `scancel 25789352`.
 
 Jobs submitted to SLURM are in the form of a "batch script". 
 A batch script is a shell script that executes commands, 
-with a preamble of Slurm [Resource directives](slurm.md/#resource-directives) 
+with a preamble of Slurm [resource directives](slurm.md/#resource-directives) 
 `#SBATCH...` to specify
 
 - an **account** or **allocation** to charge;

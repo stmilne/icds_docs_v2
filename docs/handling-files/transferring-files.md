@@ -21,7 +21,7 @@ and list approximate transfer rates for large files.
 
 ## Portal
 
-The [Roar Portal][portal] top menu under Files/Home
+The [Portal][portal] top menu under Files/Home
 opens a window that enables convenient file transfer 
 between Roar and your laptop.
 [portal]: https://rcportal.hpc.psu.edu/pun/sys/dashboard
@@ -30,7 +30,7 @@ Do not use this method for moving large (>100 GB) files.
 
 !!! warning "Upload Button Issues"
 	The "Upload" button on the Portal does not work properly. 
-	Instead, use the "Globus" button, which accesses the [Globus](globus.md) interface.
+	Instead, use the "Globus" button, which accesses the [Globus](#globus) interface.
 
 ## Firefox
 
@@ -40,8 +40,8 @@ or from an [SSH -X session][sshx].
 From Firefox, you can access OneDrive
 and other similar destinations,
 and perform file transfers.
-[portalID]: 06_AccessingCollab.md
-[sshx]: 06_AccessingCollab.md#access-via-ssh
+[portalID]: ../getting-started/connecting-to-rc.md#portal
+[sshx]: ../getting-started/connecting-to-rc.md#ssh
 
 ## Globus
 

@@ -3,7 +3,7 @@
 ## Login accounts
 
 Access to Roar requires a login account.
-All users have access to user-level [storage space](../handling-data/file-storage.md/#quotas),
+All users have access to user-level [storage space](../handling-files/file-storage.md),
 and free access to the open queue.
 
 Anyone with a Penn State access ID can [request an account on Roar](https://accounts.hpc.psu.edu/users/).
@@ -94,11 +94,10 @@ and rapid navigation within the file.
 Learning vi is like touch-typing -- 
 difficult at first, but remarkably fast.  
 
-Tutorials for vi are available [here][vi1], [here][vi2], and [here][vi3].
+Tutorials for vi are available [here][vi1] and [here][vi2].
 Once you know vi, [this summary][vi_summary] is useful.
 [vi1]: https://www.cs.colostate.edu/helpdocs/vi.html 
 [vi2]: http://heather.cs.ucdavis.edu/~matloff/UnixAndC/Editors/ViIntro.html
-[vi3]: http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html.  
 [vi_summary]: https://bpb-us-e1.wpmucdn.com/sites.psu.edu/dist/0/79295/files/2020/09/notes-on-vi.pdf
 
 Files can be edited on the laptop and transferred to Roar.

@@ -23,7 +23,7 @@ a variant of Unix.
 Unix a text-based; users interact with the system by typing commands.
 Compute clusters use Linux
 in part because tasks can be automated with scripts.
-[rhel8]: https://www.redhat.com/en/documentation/red_hat_enterprice_linux/8
+[rhel8]: https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9
 
 This user guide assumes familiarity with Unix,
 which any user who wants to do more than use the Portal needs to learn.

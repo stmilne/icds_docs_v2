@@ -3,7 +3,21 @@
 Roar is the central computing facility for Penn State, 
 operated by the Institute for Computational and Data Sciences (ICDS).
 
-## Getting Help
+## Collab and Restricted
+
+Roar is actually two distinct clusters, with distinct filesystems:
+Roar Collab (RC) and Roar Restricted (RR).
+RR is designed for working with restricted data. 
+Group storage on RR is provided on an as-needed basis 
+to principal investigators (PIs) who work with restricted data 
+and must comply with stringent data storage standards.
+
+Most material in this online User Guide applies to both RC and RR. 
+But [access](restricted/rr-getting-started.md) to RR 
+and [data transfer](restricted/rr-handling-data.md) to and from RR
+are handled differently.
+
+## Getting help
 
 This guide is intended for new and experienced Roar users alike.
 Please look here first, when you have a question about how to use Roar.

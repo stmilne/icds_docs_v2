@@ -1,14 +1,4 @@
-# Roar Restricted
-
-Roar Restricted (RR) is designed for working with restricted data. 
-Group storage on RR is provided on an as-needed basis 
-to principal investigators (PIs) who work with restricted data 
-and must comply with stringent data storage standards.
-
-Most material in the User Guide applies to both Roar Collab (RC) and RR. 
-This addendum addresses items unique to RR.
-
-## Accessing RR
+# Accessing RR
 
 To request an account on RR, Send an email to icds@psu.edu : 
 

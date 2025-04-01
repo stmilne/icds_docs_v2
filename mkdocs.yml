@@ -39,14 +39,14 @@ nav:
         - getting-started/before-you-start.md
         - getting-started/compute-hardware.md
         - getting-started/connecting-to-rc.md
+    - Accounts:
+        - accounts/accounts.md
+        - accounts/managing-accounts.md
     - File system:
         - handling-files/file-storage.md
         - handling-files/managing-files.md
         - handling-files/searching-files.md
         - handling-files/transferring-files.md
-    - Accounts:
-        - accounts/accounts.md
-        - accounts/managing-accounts.md
     - Software:
         - software/modules.md
         - software/installing-from-source.md

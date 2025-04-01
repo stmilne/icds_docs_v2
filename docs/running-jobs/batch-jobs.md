@@ -74,10 +74,14 @@ lines with `#` other than `#SBATCH` are ordinary bash script comments.
 Most scripts start with `cd $SLURM_SUBMIT_DIR`,
 which is the directory from which the job was submitted.
 
-For more information on hardware partitions, see [Partitions][partitions].  
+For more information on partitions, see [Partitions][partitions].  
 For more information on hardware requests, see [Hardware requests][hardware].
 [partitions]: ../getting-started/compute-hardware.md#partitions
 [hardware]: hardware-requests.md
+
+!!!warning "To use the open queue, use --partition=open"
+	Unpaid jobs under the open queue cannot specify a hardware partition,
+	but will be assigned to available older CPU hardware.
 
 !!!warning "To use a paid allocation, use --partition=sla-prio"
 	Jobs under a paid allocation do not specify the basic, standard,
@@ -100,7 +104,7 @@ Each serves a different purpose, and has different restrictions.
 | open | no-cost access | Portal and old hardware only, <br> pre-emptible, time < 2 days |
 | normal | for "normal" jobs | time < 14 days |
 | debug	| for testing, debugging, <br> quick analysis | one at a time, time < 1 hour |
-| express | for rush jobs; <br> 1.5x price | time < 14 days |
+| express | for rush jobs; <br> 2x price | time < 14 days |
 | interactive | for Portal jobs | time < 7 days |
 
 

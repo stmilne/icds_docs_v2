@@ -8,7 +8,7 @@ operated by the Institute for Computational and Data Sciences (ICDS).
 Roar is actually two distinct clusters, with distinct filesystems:
 Roar Collab (RC) and Roar Restricted (RR).
 RR is designed for working with restricted data. 
-Group storage on RR is provided on an as-needed basis 
+Access to and storage on RR is provided
 to principal investigators (PIs) who work with restricted data 
 and must comply with stringent data storage standards.
 

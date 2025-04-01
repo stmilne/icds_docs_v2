@@ -20,23 +20,23 @@ and type Slurm [resource directives][slurmdir] one per line into the text box.
 Hardware you request must be compatible with the account you specify.
 If you ask for high-memory nodes, standard nodes, or GPUs, 
 you need either a credit account, or a paid allocation 
-that covers the selected hardware.
+that includes the requested hardware.
 
 To use the open partition:
 
  - Account: open
  - Sbatch options: --partition=open
 
-To use an [allocation](../accounts/accounts.md):
-
- - Account: your_allocation_id
- - Sbatch options: --partition=sla-prio
-
 To use a [credit account](../accounts/accounts.md)
 and specify a [hardware partition](../getting-started/compute-hardware.md#partitions):
 
  - Account: your_credit_account
  - Sbatch options: --partition=hardware_partition
+
+To use an [allocation](../accounts/accounts.md):
+
+ - Account: your_allocation_id
+ - Sbatch options: --partition=sla-prio
 
 !!! warning "All jobs must fit inside the resource limits of the partition they are running on"
      If resource requests exceed the partition limits, the job will not begin.

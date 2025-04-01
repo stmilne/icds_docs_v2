@@ -6,7 +6,7 @@ and fine-tune their hardware requests with `constraint` directives.
 ## GPUs
 
 GPUs are only available to paid credit accounts,
-or allocations which include GPU nodes.  
+or allocations that include GPU nodes.  
 For a batch job paid by a credit account, to request a single GPU:
 
 ```
@@ -14,8 +14,6 @@ For a batch job paid by a credit account, to request a single GPU:
 --gres=gpu:1
 ```
 
-If the job is paid by an allocation, use `--partition=sla-prio`. 
- 
 To request n GPUs, replace 1 above by n.  
 To request a specific model of GPU, use `--gres=gpu:a100:1`.
 
@@ -24,7 +22,7 @@ For an interactive job paid by a credit account, use `salloc`:
 salloc -A <account> -p standard --gres=gpu:a100:1 ...
 ```
 
-If the job is paid by an allocation, use `-p sla-prio`.
+If the job is paid by an allocation, use `-p sla-prio` instead of `-p standard`.
 
 For information on available GPU nodes, see [Compute Hardware][hardware].
 [hardware]: ../getting-started/compute-hardware.md

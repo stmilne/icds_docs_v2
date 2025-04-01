@@ -25,17 +25,14 @@ To request an interactive job with a GPU, under a credit account use
 salloc -A <account> -p standard --gres=gpu:1 ...
 ```
 
-and under a paid allocation use
-
-```
-salloc -A <account> -p sla-prio --gres=gpu:1 ...
-```
+Under a paid allocation (that includes GPU nodes), use `-p sla-prio`.
 
 For more details, see [Hardware requests](hardware-requests.md).
 
 !!!warning "GPUs are only available to paid accounts."
 	To request GPUs for an interactive job,
-	you must have a paid credit account or allocation.
+	you must have a paid credit account,
+	or a paid allocation that includes GPU nodes.
 
 ## VirtualGL
 

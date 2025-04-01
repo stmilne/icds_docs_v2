@@ -10,7 +10,7 @@ users can create and use custom module files.
 
 ## Example
 
-Here is the contents of the `gromacs/2024.3` module file:
+Here are the contents of the `gromacs/2024.3` module file:
 
 ```
 whatis([[Name : gromacs]])
@@ -48,13 +48,13 @@ prepend_path('PKG_CONFIG_PATH', pathJoin(base,'lib64/pkgconfig'))
 
 ## Loading custom modules
 
-The `module use` command specifies the location of module files:
+The `module use` command
 
 ```
 module use <module_directory>
 ```
 
-in which `<module_directory>` is the path to your modules.
+tells LMOD to look for your modules in `<module_directory>`.
 
 Adding the `module use` line to your `.bashrc` file 
 will make the modules accessable upon login.

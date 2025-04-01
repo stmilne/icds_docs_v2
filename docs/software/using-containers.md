@@ -1,48 +1,44 @@
 # Containers
 
-Containers address the growing issue of software and dependency complexity by storing the 
-software and all its dependencies (including a minimal operating system) in a single image 
-file, which runs on top of the host machine kernel - abstracting the application layer 
-and defining the user environment.
+Containers address the issue of software and dependency complexity 
+by storing the software and its dependencies (including a minimal operating system) 
+in a single image file, which runs on top of the host machine kernel.
 
-Containers change the user space into a swappable component, and provide the following benefits:
+Containers provide:
 
 - Flexibility: Bring your own environment (BYOE) and bring your own software (BYOS)
 - Reproducibility: Complete control over software versions
-- Portability: Run a container on your laptop or on HPC systems
-- Performance: Similar performance characteristics as native applications
-- Compatibility: Open standard that is supported on all major Linux distributions
+- Portability: Run on your laptop or on HPC systems
+- Performance: Nearly as fast as as native applications
+- Compatibility: Supported on most Linux distributions
 
-If containers are new to you, we recommend the [Introduction to Containers on HPC 
-lesson](https://pawseysc.github.io/hpc-container-training/) developed by the [Pawsey 
-Supercomputer Centre](https://pawsey.org.au/).
+For more information, see
+[Introduction to Containers](https://pawseysc.github.io/hpc-container-training/) 
+from the [Pawsey Supercomputer Centre](https://pawsey.org.au/).
 
-Apptainer is a secure container platform designed for HPC use cases and is available on Roar. 
-
-Containers (or images) can either be pulled directly from a container repository or can be 
-built from a definition file. 
+Apptainer is a container platform available on Roar.
+Containers can either be downloaded from a container repository
+or built from a definition file. 
 
 !!! warning "Building containers requires root privileges."
      Containers are built on your personal device and can be deployed on Roar. Alternatively, 
-     the `--fakeroot` option can be used to build containers without root privileges as described in 
-     Apptainer's documentation of the [fakeroot feature](https://apptainer.org/docs/user/main/fakeroot.html#usage).
+     the `fakeroot` option can be used to build containers on Roar without root privileges;
+     see [fakeroot](https://apptainer.org/docs/user/main/fakeroot.html#usage).
 
 
 ## Containers with Slurm
 
-In a Slurm submission script, a container can be called serially using the following run line:
+In a Slurm batch script, a container can be launched with:
 
 ```
 $ apptainer run <container> <args>
 ```
 
-To use a container in parallel with MPI, the MPI library within the container must be compatible 
-with the MPI implementation on the system, meaning that the MPI version on the system must generally 
-be newer than the MPI version within the container. 
+To use a container with parallel execution,
+the system version of MPI must be newer than the container MPI library. 
+See [Apptainer and MPI Applications](https://apptainer.org/docs/user/1.0/mpi.html). 
 
-More details on using MPI with containers can be found on Apptainer's [Apptainer and MPI Applications](https://apptainer.org/docs/user/1.0/mpi.html) page. 
-
-In a Slurm submission script, a container with MPI can be called using
+In a Slurm batch script, a container with MPI can be launched with:
 
 ```
 $ srun apptainer exec <container> <command> <args>

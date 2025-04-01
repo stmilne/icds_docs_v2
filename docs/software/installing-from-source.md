@@ -3,7 +3,7 @@
 Roar offers a broad range of installed open-source applications,
 but sometimes you need an application Roar does not yet have.
 You may then submit a [Software Request][SRF], 
-particularly if you can justify that it would be used by other groups.
+particularly if you can justify that it would be used by others.
 [SRF]: https://www.icds.psu.edu/roar-collab-software-request-form/
 
 Alternatively, you may compile and install software in your own directories. 
@@ -28,14 +28,13 @@ To avoid hardware incompatibiities,
 you should build software on a node with the same processor type 
 that will be used to run the software,
 by using an interactive batch session to log onto the desired compute node.
-On a compute node, running the following command displays the processor type:
+On a compute node, to display the processor type, execute:
 
 ```
 $ cat /sys/devices/cpu/caps/pmu_name
 ```
 
-Software builds are not typically backwards-compatible;
-software built on newer processors may not run on older processors.
+Software built on newer processors may not run on older processors.
 If you want to ensure your software runs on all of Roar's nodes 
 (which vary considerably in age), 
 build on a Haswell node (the oldest now on Roar).
@@ -43,20 +42,20 @@ However, this will prevent your application
 from taking advantage of some performance improvements
 available only on the newer processors.
 
-    | Release Date | Processor |
-    | :----: | :----: |
-    | 2013 | haswell |
-    | 2014 | broadwell |
-    | 2015 | skylake |
-    | 2019 | cascadelake |
-    | 2019 | icelake |
-    | 2023 | sapphirerapids |
+| Release Date | Processor |
+| ---- | ---- |
+| 2013 | haswell |
+| 2014 | broadwell |
+| 2015 | skylake |
+| 2019 | cascadelake |
+| 2019 | icelake |
+| 2023 | sapphirerapids |
 
 ## wget
 
 The first step is to get the source package (typically a tarball of some sort)
 from the developer website onto Roar.
-If you are logged on with Interactive Desktop or an SSH -X session, 
+If you are logged on with the Portal Interactive Desktop or an SSH -X session, 
 you can launch Firefox and download software using the browser.
 
 Alternatively, you can use [`wget`][wget],

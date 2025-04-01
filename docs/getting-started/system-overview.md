@@ -12,8 +12,8 @@ Compute clusters like Roar serve many purposes:
 Roar consists of different parts, connected together by networks:
 
 - **users** of the cluster, who connect to either
-- **submit nodes**, to prepare and submit jobs, or
-- **the Portal**, for interactive computing;
+- **the Portal**, for interactive computing, or
+- **submit nodes**, to prepare and submit jobs;
 - **file storage** for user files, plus
 - **scratch storage** for temporary files; and 
 - **compute nodes**, of several different types.
@@ -32,7 +32,7 @@ you need either a paid [credit account](../accounts/accounts.md),
 or a paid [allocation](../accounts/accounts.md).
 With credit accounts, you pay only only the compute resources you use,
 and can use any type of nodes you need.
-However, if you require near-instant access to specific hardware,
+However, if you require prompt access to specific hardware,
 you can opt for an allocation ---
 in which you reserve specific hardware,
 and pay whether or not you use the compute time.

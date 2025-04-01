@@ -1,16 +1,16 @@
 # Anaconda
 
-Anaconda is a "package manager",
+Anaconda is a package manager,
 originally developed for Python, 
 but now used by several software platforms
-to manage installation of packages.
+to manage package installation.
 
 One such software platform is R,
 a widely used application for statistical analysis and plotting,
 which is greatly extensible by loading packages.
 
-To learn more about Anaconda, we recommend the ["Introduction to Conda for (Data) Scientists" 
-Lesson](https://carpentries-incubator.github.io/introduction-to-conda-for-data-scientists/) 
+For more information, see
+["Introduction to Conda for (Data) Scientists"](https://carpentries-incubator.github.io/introduction-to-conda-for-data-scientists/) 
 from [The Carpentries](https://carpentries.org/).
 
 ## Anaconda commands
@@ -39,14 +39,14 @@ To use Anaconda to manage the installation of R, first load its module:
 module load anaconda
 ```
 
-Next, create an Anaconda "environment" (set of loaded applications and packages),
-that contains R as a "base":
+Next, create an Anaconda "environment" (set of applications and packages)
+with R as a "base":
 
 ```
 conda create -y -n <environmentName> r-base
 ```
 
-If you want some R package always to be loaded, include it in the list of packages:
+If you want some R package always to be loaded, include it in the package list:
 
 ```
 conda create -y -n <environmentName> r-base r-plot3d r-ggplot
@@ -66,17 +66,18 @@ conda install <package>
 
 ## Anaconda in batch scripts
 
-To ensure that Anaconda is properly initialized for use in batch scripts, 
-your `.bashrc` file must be executed.  This can be done in one of three ways:
+To initialize Anaconda for use in batch scripts, 
+your `.bashrc` file must be executed.  
+This can be done in one of three ways:
 
 - `source ~/.bashrc`  executes your `.bashrc` file;
 - load your environment with `source activate <environmentName>`;
-- begin your script with `#!/bin/bash`, which also executes your `.bashrc` file.
+- begin your script with `#!/bin/bash`, which executes your `.bashrc` file.
 
 ## Anaconda on Portal
 
-Special considerations apply if you want to use conda environments you have defined,
-for Python or R for example, in an interactive session launched from the Portal.
+If you want to use conda environments
+for Python or R in a Portal interactive session, special considerations apply.
 
 ### Jupyter Server
 
@@ -84,15 +85,15 @@ The Jupyter Server can be used with a pre-defined Python environment,
 which you select from the "Environment type" dropdown menu 
 that appears as you configure the session.
 
-To use your own previously created conda environment within a Jupyter Server session,
-select instead "Use custom text field", which will contain 
+To use your own conda environment in a Jupyter Server session,
+select "Use custom text field", which will contain 
 
 ```
 module load anaconda3
 ```
 
 For this to work, the `ipykernel` package must be installed into your environment beforehand.
-To do this, within a terminal session execute the following:
+To do this, in a terminal session execute:
 
 ```
 conda activate <environment>
@@ -106,11 +107,11 @@ When the session begins, your environment is displayed in the kernel list.
 
 Likewise, RStudio can be used with a default environment,
 selected from the "Environment selection" dropdown menu.
-Furthermore, when the session starts,
+When the session starts,
 additional R packages can be installed from an extensive list.
 
-But if you want to use your own custom environment within an RStudio session,
-select instead "Use custom text field", and enter the following text:
+To use a custom environment in an RStudio session,
+select "Use custom text field", and enter:
 
 ```
 module load anaconda
@@ -119,10 +120,8 @@ export CONDAENVLIB=$WORK/.conda/envs/<environment>/lib
 export LD_LIBRARY_PATH=$CONDAENVLIB:$LD_LIBRARY_PATH
 ```
 
-Notes:
-
-- The export commands help RStudio load some libraries 
+The `export` commands help RStudio find some libraries 
 while accessing the conda environment's R installation. 
-- The default location of conda environments is `$WORK/.conda/envs`.
-If your environment is installed somewhere else, 
+The default location for conda environments is `$WORK/.conda/envs`.
+If your environment is installed elsewhere, 
 `CONDAENVLIB` should be set accordingly. 

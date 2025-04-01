@@ -2,7 +2,7 @@
 
 Common tasks on any filesystem include navigating to a directory; listing the files; 
 creating folders; and copying, moving, renaming, and deleting files and folders.
-In classic Unix, these tasks are all performed with command line tools: 
+In classic Linux, these tasks are all performed with command line tools: 
 
 - `cd` (change directory)
 - `ls` (list files) 
@@ -12,7 +12,7 @@ In classic Unix, these tasks are all performed with command line tools:
 -  `mv` (move)
 -  `rm` (remove)
 
-Part of learning [Linux]()../getting-started/before-you-start.md/#roar-uses-linux)
+Part of learning [Linux](../getting-started/before-you-start.md/#roar-uses-linux)
 is becoming familiar with these commands. 
 
 If you prefer a more "graphical" user interface, two options exist.
@@ -39,7 +39,7 @@ drwxr-s-- 2 root <PIuserID>
 
 The `s` setting in the group permissions means 
 every file and folder created within the group folder
-will have the same group read `r` permission.
+will have the same group permissions.
 However, files created elsewhere and moved into group 
 have the permissions they were created with.
 To change them, use [`chmod`][chmod]:

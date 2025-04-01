@@ -16,7 +16,7 @@ R packages can be installed from the R console:
 > install.packages( <package> )
 ```
 
-The first time you run this command in a single version of R, 
+The first time you run this command in a given version of R, 
 you will be prompted to create a personal library;
 The default location is the `.R` directory in your home directory. 
 
@@ -56,7 +56,7 @@ before the package can be installed.
 For example, some R packages use CMake to perform installations;
 others may require a particular version of a compiler to be loaded.
 Be sure to use `module load` to load the necessary dependencies 
-before launching the R console session.
+before launching R.
 
 !!!warning "Always check R package documentation for required dependencies." 
 	CRAN hosted packages almost always have a Reference manual which specify dependencies.
@@ -67,7 +67,7 @@ before launching the R console session.
 For example, to install the R package `units`, 
 the [package documentation](https://cran.r-project.org/web/packages/units/units.pdf) 
 lists the C library udunits-2 under "SystemRequirements". 
-So we must download and compile the system library udunits-2:
+So we must download and compile udunits-2:
  
 ```
 $ wget https://downloads.unidata.ucar.edu/udunits/2.2.28/udunits-2.2.28.tar.gz
@@ -78,8 +78,7 @@ $ make
 $ make install
 ```
 
-Next, we set certain environmental variables
-so R can find the udunits-2 library:
+Next, we set environmental variables so R can find the udunits-2 library:
 
 ```
 $ export UDUNITS2_INCLUDE=$HOME/.local/include
@@ -87,7 +86,7 @@ $ export UDUNITS2_LIBS=$HOME/.local/lib
 $ export LD_LIBRARY_PATH=$HOME/.local/lib:$LD_LIBRARY_PATH
 ```
 
-Now we can install the R package:
+Now we can install the `units` package:
 ```
 $ module load r/4.2.1
 $ R

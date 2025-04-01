@@ -24,9 +24,9 @@ and list approximate transfer rates for large files.
 The [Portal][portal] top menu under Files/Home
 opens a window that enables convenient file transfer 
 between Roar and your laptop.
-[portal]: https://rcportal.hpc.psu.edu/pun/sys/dashboard
 With this utility, small files can be conveniently moved, edited, uploaded, and downloaded. 
 Do not use this method for moving large (>100 GB) files.
+[portal]: https://rcportal.hpc.psu.edu/pun/sys/dashboard
 
 !!! warning "Upload Button Issues"
 	The "Upload" button on the Portal does not work properly. 

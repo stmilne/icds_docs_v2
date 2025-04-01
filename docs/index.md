@@ -13,9 +13,9 @@ to principal investigators (PIs) who work with restricted data
 and must comply with stringent data storage standards.
 
 Most material in this online User Guide applies to both RC and RR. 
-But [access](restricted/rr-getting-started.md) to RR 
-and [data transfer](restricted/rr-handling-data.md) to and from RR
-are handled differently.
+But access to RR and data transfer to and from RR are handled differently.
+See [Accessing RR](restricted/rr-getting-started.md)
+and [Data transfer](restricted/rr-handling-data.md) for details.
 
 ## Getting help
 

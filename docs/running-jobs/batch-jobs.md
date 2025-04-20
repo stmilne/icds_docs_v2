@@ -107,6 +107,23 @@ Each serves a different purpose, and has different restrictions.
 | express | for rush jobs; <br> 2x price | time < 14 days |
 | interactive | for Portal jobs | time < 7 days |
 
+To get detailed information about queues, 
+use [`sacctmgr list qos`](https://slurm.schedmd.com/sacctmgr.html).  
+This command works best with formatting:  an example is
+```
+sacctmgr list qos format=name%8,maxjobs%8,maxsubmitjobsperuser%9,maxwall%8,\
+priority%8,preempt%8,usagefactor%12 names=open,ic,debug,express,normal
+```
+which produces output like this:
+```
+    Name  MaxJobs MaxSubmit  MaxWall Priority  Preempt  UsageFactor
+-------- -------- --------- -------- -------- -------- ------------
+  normal                                 1000     open     1.000000
+    open      100       200                 0              1.000000
+      ic        1                           0              1.000000
+   debug        1         1 04:00:00    20000     open     1.000000
+ express                                10000     open     2.000000
+```
 
 ## Resource usage
 

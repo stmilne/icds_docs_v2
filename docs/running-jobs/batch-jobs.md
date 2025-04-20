@@ -34,7 +34,7 @@ To cancel the job, execute `scancel 25789352`.
 
 Jobs submitted to SLURM are in the form of a "batch script". 
 A batch script is a shell script that executes commands, 
-with a preamble of Slurm [resource directives](slurm.md/#resource-directives) 
+with a preamble of Slurm [resource directives](slurm-scheduler.md/#resource-directives) 
 `#SBATCH...` to specify
 
 - an **account** or **allocation** to charge;

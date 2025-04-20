@@ -40,8 +40,8 @@ or from an [SSH -X session][sshx].
 From Firefox, you can access OneDrive
 and other similar destinations,
 and perform file transfers.
-[portalID]: ../getting-started/connecting-to-rc.md#portal
-[sshx]: ../getting-started/connecting-to-rc.md#ssh
+[portalID]: ../getting-started/connecting.md#portal
+[sshx]: ../getting-started/connecting.md#ssh
 
 ## Globus
 

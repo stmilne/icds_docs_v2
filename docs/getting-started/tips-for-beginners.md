@@ -5,12 +5,12 @@
      examining results, and transferring files.
 
 !!! warning "Don't store files on scratch."
-     [Scratch is not backed up](../handling-files/file-storage.md/#quotas), 
+     [Scratch is not backed up](../file-system/file-storage.md/#quotas), 
      and files more than 30 days old are deleted.
 
 !!! warning "Don't overrun your file storage quota."
      If you fill your allotted disk space, weird errors result.
-     Keep an eye on your [disk space usage](../handling-files/file-storage.md/#quotas).
+     Keep an eye on your [disk space usage](../file-system/file-storage.md/#quotas).
 
 !!! warning "Don't waste your compute resources."
      Use interactive sessions to test your workflow.
@@ -37,7 +37,7 @@ is [here](../pdf/unixGuide.pdf).
 
 See also the online lesson [HPC Carpentry lesson "Introduction
 to Using the Shell in a HPC Context"](https://www.hpc-carpentry.org/hpc-shell/),
-which can be followed after [logging onto Roar](connecting-to-rc.md/#ssh).
+which can be followed after [logging onto Roar](connecting.md/#ssh).
 
 
 

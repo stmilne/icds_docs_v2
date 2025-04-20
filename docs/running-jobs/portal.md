@@ -15,7 +15,7 @@ For the casual user, the preset defaults are sufficient:
 
 To override these defaults, check the box "Enable advanced Slurm options",
 and type Slurm [resource directives][slurmdir] one per line into the text box.
-[slurmdir]: slurm.md#resource-directives
+[slurmdir]: slurm-scheduler.md#resource-directives
 
 Hardware you request must be compatible with the account you specify.
 If you ask for high-memory nodes, standard nodes, or GPUs, 
@@ -27,13 +27,13 @@ To use the open partition:
  - Account: open
  - Sbatch options: --partition=open
 
-To use a [credit account](../accounts/accounts.md)
+To use a [credit account](../accounts/paying-for-compute.md)
 and specify a [hardware partition](../getting-started/compute-hardware.md#partitions):
 
  - Account: your_credit_account
  - Sbatch options: --partition=hardware_partition
 
-To use an [allocation](../accounts/accounts.md):
+To use an [allocation](../accounts/paying-for-compute.md):
 
  - Account: your_allocation_id
  - Sbatch options: --partition=sla-prio

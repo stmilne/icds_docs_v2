@@ -60,5 +60,5 @@ Adding the `module use` line to your `.bashrc` file
 will make the modules accessable upon login.
 
 Creating module files within group storage directories can make them accessable to all group members. 
-Ensure that the correct [file permissions](../handling-files/managing-files.md#file-permissions) are set 
+Ensure that the correct [file permissions](../file-system/managing-files.md#file-permissions) are set 
 to allow all group members to read and execute the module files.

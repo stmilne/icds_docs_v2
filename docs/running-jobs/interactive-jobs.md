@@ -11,7 +11,7 @@ salloc -N 1 -n 4 -A <account> -t 1:00:00
 `salloc` is a [Slurm][slurm] command, which takes many options.
 In the above example, `-N` is the number of nodes,
 `-n` the number of cores, and `-t` the run time.
-[slurm]: slurm.md
+[slurm]: slurm-scheduler.md
 
 Option `-A <account>` specifies your paid credit account or allocation;
 to run under the open queue, use `-A open`. 
@@ -41,7 +41,7 @@ For applications that produce graphical output
 using OpenGL can speed up the drawing.
 
 For this to work, you must either use the Portal,
-or log on with [X forwarding](../getting-started/connecting-to-rc.md#x-forwarding)
+or log on with [X forwarding](../getting-started/connecting.md#x-forwarding)
 and run an interactive job on a GPU node.
 Then, you can launch your application with 
 ```

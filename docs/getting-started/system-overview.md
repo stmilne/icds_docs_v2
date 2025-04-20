@@ -22,14 +22,14 @@ Roar consists of different parts, connected together by networks:
 
 ## Accounts
 
-To log on to Roar, you need a [login account](connecting-to-rc.md/#login-accounts).
+To log on to Roar, you need a [login account](connecting.md/#login-accounts).
 To work on Roar, you can use the open queue at no cost,
 which gives you access to the Portal, 
 and to batch jobs on vintage hardware.
 
 But to use any of the newer, more powerful hardware, 
-you need either a paid [credit account](../accounts/accounts.md), 
-or a paid [allocation](../accounts/accounts.md).
+you need either a paid [credit account](../accounts/paying-for-compute.md), 
+or a paid [allocation](../accounts/paying-for-compute.md).
 With credit accounts, you pay only only the compute resources you use,
 and can use any type of nodes you need.
 However, if you require prompt access to specific hardware,
@@ -65,5 +65,5 @@ needed to prepare and submit jobs.
 Roar can also be accessed via SSH (Secure SHell),
 from a terminal application on a laptop.
 For more information about Portal and SSH access,
-see [Connecting](connecting-to-rc.md).
+see [Connecting](connecting.md).
 

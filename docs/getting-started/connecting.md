@@ -3,7 +3,7 @@
 ## Login accounts
 
 Access to Roar requires a login account.
-All users have access to user-level [storage space](../handling-files/file-storage.md),
+All users have access to user-level [storage space](../file-system/file-storage.md),
 and free access to the open queue.
 
 Anyone with a Penn State access ID can [request an account on Roar](https://accounts.hpc.psu.edu/users/).

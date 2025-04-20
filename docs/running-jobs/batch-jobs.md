@@ -103,13 +103,13 @@ Each serves a different purpose, and has different restrictions.
 | ---- | ---- | ---- |
 | open | no-cost access | Portal and old hardware only, <br> pre-emptible, time < 2 days |
 | normal | for "normal" jobs | time < 14 days |
-| debug	| for testing, debugging, <br> quick analysis | one at a time, time < 1 hour |
+| debug	| for testing, debugging, <br> quick analysis | one at a time, time < 4 hours |
 | express | for rush jobs; <br> 2x price | time < 14 days |
 | interactive | for Portal jobs | time < 7 days |
 
-To get detailed information about queues, 
-use [`sacctmgr list qos`](https://slurm.schedmd.com/sacctmgr.html).  
-This command works best with formatting:  an example is
+To get detailed information about queues, use `sacctmgr list qos`.  
+This command has a lot of [options](https://slurm.schedmd.com/sacctmgr.html),
+and works best with formatting:  an example is
 ```
 sacctmgr list qos format=name%8,maxjobs%8,maxsubmitjobsperuser%9,maxwall%8,\
 priority%8,preempt%8,usagefactor%12 names=open,ic,debug,express,normal

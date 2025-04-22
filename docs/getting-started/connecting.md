@@ -49,11 +49,12 @@ To set up MFA, visit the [PSU accounts portal](https://accounts.psu.edu/2fa).
 
 To use any Roar application that "opens a window"
 (an  "X Window" or "X11" application), 
-you need an additional program on your laptop.
-On a Mac, this is [XQuartz](https://www.xquartz.org);
-on a PC, you need [VcXsrv](https://sourceforge.net/projects/vcxsrv/).
+you must install an additional program on your laptop.
 
-To use Roar applications that open windows, log on with
+On a Mac, install [XQuartz](https://www.xquartz.org);
+on a PC, install [VcXsrv](https://sourceforge.net/projects/vcxsrv/).
+
+Then, log on with
 option `-X` for "X forwarding":
 <br> `ssh -X <userid>@submit.hpc.psu.edu`
 

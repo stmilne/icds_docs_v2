@@ -1,10 +1,10 @@
 # Accessing RR
 
-To request an account on RR, Send an email to icds@psu.edu : 
+To request an account on RR, Send an email to <icds@psu.edu>: 
 
- - Indicate that the request is for Roar Restricted
- - Include the requestor's access ID.
- - Provide the restricted storage owner's name and access ID.
+ - indicate that the request is for Roar Restricted;
+ - include the requestor's access ID;
+ - provide the restricted storage owner's name and access ID.
 
 Note: Non-faculty accounts require approval from a PI sponsor.
 

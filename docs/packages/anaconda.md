@@ -32,6 +32,16 @@ This table summarizes useful Anaconda commands:
 | `conda env create –f env_name.yml` | Loads an environment from a file |
 
 
+## Anaconda in batch scripts
+
+To initialize Anaconda for use in batch scripts, 
+your `.bashrc` file must be executed.  
+This can be done in one of three ways:
+
+- `source ~/.bashrc`  executes your `.bashrc` file;
+- load your environment with `source activate <environmentName>`;
+- begin your script with `#!/bin/bash`, which executes your `.bashrc` file.
+
 ## Example: R packages
 
 To use Anaconda to manage the installation of R, first load its module: 
@@ -64,20 +74,13 @@ Within an active environment, to load a package, execute
 conda install <package>
 ```
 
-## Anaconda in batch scripts
 
-To initialize Anaconda for use in batch scripts, 
-your `.bashrc` file must be executed.  
-This can be done in one of three ways:
-
-- `source ~/.bashrc`  executes your `.bashrc` file;
-- load your environment with `source activate <environmentName>`;
-- begin your script with `#!/bin/bash`, which executes your `.bashrc` file.
 
 ## Anaconda on Portal
 
 If you want to use conda environments
 for Python or R in a Portal interactive session, special considerations apply.
+(see also [Portal custom environments](../running-jobs/portal.md/#custom-environments)).
 
 ### Jupyter Server
 

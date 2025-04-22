@@ -27,7 +27,7 @@ Nodes on Roar are grouped into four different hardware partitions:
 
 - **basic** – CPU nodes without Infiniband, for jobs that fit on a single node.
 - **standard** – CPU nodes with Infiniband (essential for multinode jobs).
-- **high-memory** – CPU nodes with extra memory, for memory-intensive jobs.
+- **himem** – CPU nodes with extra memory, for memory-intensive jobs.
 - **interactive** – Nodes with graphics cards, that service the Portal.
 
 All the various types of GPU nodes are grouped into the standard partition,

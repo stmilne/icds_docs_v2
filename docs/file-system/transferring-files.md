@@ -19,14 +19,19 @@ and list approximate transfer rates for large files.
 | Roar &harr; laptop | Cyberduck or FileZilla | 15 |
 | OneDrive &harr; laptop | web access |20 |
 
+(Transfer rates may be slower, 
+if limited by intervening network or storage speeds.)
+
 ## Portal
 
 The [Portal][portal] top menu under Files/Home
 opens a window that enables convenient file transfer 
 between Roar and your laptop.
 With this utility, small files can be conveniently moved, edited, uploaded, and downloaded. 
-Do not use this method for moving large (>100 GB) files.
 [portal]: https://rcportal.hpc.psu.edu/pun/sys/dashboard
+
+Use this method only for moving small (<1 GB) files;
+for larger files, use [Globus](#globus).
 
 !!! warning "Upload Button Issues"
 	The "Upload" button on the Portal does not work properly. 
@@ -34,14 +39,14 @@ Do not use this method for moving large (>100 GB) files.
 
 ## Firefox
 
-The Firefox browser is available either 
-from the [Portal Interactive Desktop][portalID]
-or from an [SSH -X session][sshx].
+The Firefox browser is available 
+from the [Portal Interactive Desktop][portalID].
 From Firefox, you can access OneDrive
 and other similar destinations,
-and perform file transfers.
+and upload and download files to Roar.
 [portalID]: ../getting-started/connecting.md#portal
-[sshx]: ../getting-started/connecting.md#ssh
+
+From the Interactive Desktop, launch the Web Browser from the Applications menu.
 
 ## Globus
 
@@ -63,8 +68,11 @@ ICDS has endpoints for Roar, Archive, and OneDrive:
 | Archive | Penn State ICDS Archive |
 | PSU OneDrive | Penn State ICDS OneDrive |
 
-To transfer files to or from a personal machine, 
-users can establish a personal endpoint, 
+To transfer files to or from a laptop,
+use the upload/download buttons on the Globus [web interface][globusweb].
+[globusweb]:  https://www.globus.org
+ 
+Alternatively, users can establish a personal endpoint, 
 by installing the Globus Connect Personal client,
 available for [Linux](https://docs.globus.org/globus-connect-personal/install/linux/),
 [macOS](https://docs.globus.org/globus-connect-personal/install/mac/), and

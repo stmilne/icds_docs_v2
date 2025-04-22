@@ -26,21 +26,10 @@ The most common directives are:
 | NA | `--mem` | memory per node |
 | NA | `--mem-per-cpu` | memory per core |
 | `-t` | `--time` | maximum run time |
+| NA | `--gres` | GPU request |
 | `-C` | `--constraint` | required node features<br>*only for paid accounts* |
 | `-e` | `--error` | direct standard error to a file |
 | `-o` | `--output` | direct standard output to a file |
-
-## Replacement symbols
-
-Replacement symbols can be used in Slurm directives,
-to build job names and filenames with information specific to the job being run:
-
-| Symbol | Description |
-| :----: | ---- |
-| `%j` | Job ID |
-| `%x` | Job name |
-| `%u` | Username |
-| `%N` | Hostname where the job is running |
 
 ## Environment variables
 
@@ -57,7 +46,20 @@ Slurm defines environment variables within the scope of a job:
 | `SLURM_QUEUE` | Queue (partition) |
 | `SLURM_SUBMIT_DIR` | Directory of job submission |
 
-For more information on Slurm directives, replacement symbols, and environmental variables, 
+## Replacement symbols
+
+Replacement symbols can be used in Slurm directives,
+to build job names and filenames with information specific to the job being run:
+
+| Symbol | Description |
+| :----: | ---- |
+| `%j` | Job ID |
+| `%x` | Job name |
+| `%u` | Username |
+| `%N` | Hostname where the job is running |
+
+
+For more information on Slurm directives, environment variables, and replacement symbols, 
 see [Slurm sbatch documentation](https://slurm.schedmd.com/sbatch.html) for batch jobs 
 and [Slurm salloc documentation](https://slurm.schedmd.com/salloc.html) for interactive jobs.
 

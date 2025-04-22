@@ -7,36 +7,42 @@ and Integrated Developer Environments (IDEs) such as Jupyter and RStudio.
 
 ## Selecting resources
 
-Interactive jobs on the Portal are scheduled and managed by Slurm.
-Resources to be used must be specified:
+Interactive jobs on the Portal make use of various resources:
 queue, number and type of nodes, number of cores, memory (RAM), run time.
-For the casual user, the preset defaults are sufficient:
+For the casual user, the default choices for these resources are sufficient:
 1 node, 4 cores, 64GB, 1 hour, open queue.
 
-To override these defaults, check the box "Enable advanced Slurm options",
-and type Slurm [resource directives][slurmdir] one per line into the text box.
+To pay for your job with [credit account or allocation](../accounts/paying-for-compute.md),
+select it from the Account drop-down menu.
+
+With a credit account, you can choose from the Partition drop-down menu 
+a hardware [partition][partitions] to run your job.
+With an allocation, select "sla-prio" from the Partition menu.
+[partitions]: ../getting-started/compute-hardware.md#partitions
+
+To override the default choices for nodes, cores, memory, and run time,
+or to request a GPU,  
+check the box "Enable advanced Slurm options",
+and type Slurm [resource directives][slurmdir] one per line into the text box, like this:
 [slurmdir]: slurm-scheduler.md#resource-directives
+```
+--ntasks=8
+--mem=128GB
+--time=8:00:00
+```
+The above requests 8 cores (tasks), 128GB memory, and 8 hour run time.
 
-Hardware you request must be compatible with the account you specify.
-If you ask for high-memory nodes, standard nodes, or GPUs, 
-you need either a credit account, or a paid allocation 
-that includes the requested hardware.
+To request a GPU, you must be running on the standard partition, 
+or have an allocation that includes GPUs.
+The Slurm option to request one A40 GPU looks like:
+```
+--gres=gpu:a40:1
+```
 
-To use the open partition:
-
- - Account: open
- - Sbatch options: --partition=open
-
-To use a [credit account](../accounts/paying-for-compute.md)
-and specify a [hardware partition](../getting-started/compute-hardware.md#partitions):
-
- - Account: your_credit_account
- - Sbatch options: --partition=hardware_partition
-
-To use an [allocation](../accounts/paying-for-compute.md):
-
- - Account: your_allocation_id
- - Sbatch options: --partition=sla-prio
+!!! warning "Hardware you request must be compatible with the account you specify.""
+	If you ask for high-memory nodes, standard nodes, or GPUs, 
+	you need either a credit account, or a paid allocation 
+	that includes the requested hardware.
 
 !!! warning "All jobs must fit inside the resource limits of the partition they are running on"
      If resource requests exceed the partition limits, the job will not begin.

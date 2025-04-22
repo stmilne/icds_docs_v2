@@ -36,8 +36,8 @@ plugins:
 nav:
     - Getting started: 
         - getting-started/system-overview.md
-        - getting-started/tips-for-beginners.md
         - getting-started/compute-hardware.md
+        - getting-started/tips-for-beginners.md
         - getting-started/connecting.md
     - Accounts:
         - accounts/paying-for-compute.md

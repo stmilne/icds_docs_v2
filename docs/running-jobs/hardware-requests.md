@@ -1,6 +1,7 @@
 # Hardware requests 
 
-Users with paid credit accounts and allocations can request GPU nodes,
+Users with paid [credit accounts or allocations](../accounts/paying-for-compute.md)
+can request GPU nodes,
 and fine-tune their hardware requests with `constraint` directives.
 
 ## GPUs
@@ -24,8 +25,11 @@ salloc -A <account> -p standard --gres=gpu:a100:1 ...
 
 If the job is paid by an allocation, use `-p sla-prio` instead of `-p standard`.
 
-For information on available GPU nodes, see [Compute Hardware][hardware].
+For information on available GPU nodes, see [Compute hardware][hardware].
+For the names of different GPU types (a100, a40, v100, p100,...)
+see [Hardware info][hardwareinfo].
 [hardware]: ../getting-started/compute-hardware.md
+[hardwareinfo]: hardware-requests.md/#hardware-info
 
 !!! warning "Make sure your application is GPU-enabled."
     If your application does not use GPUs,   
@@ -52,13 +56,37 @@ sinfo --Format=features:30,nodelist:20,cpus:5,memory:10,gres:30
 ```
 
 On Roar, `sinfo` output would look like:
-
-![sinfo table](../img/sinfo_table.png)
+```
+AVAIL_FEATURES                NODELIST            CPUS MEMORY    GRES
+bc,basic,broadwell,open       p-bc-[5001-5240]    24   126400    (null)
+sc,standard,broadwell,open    p-hc-[6001-6002]    56   1024000   (null)
+sc,standard,haswell,open      p-sc-[2337-2569]    24   257800    (null)
+bc,basic,sapphirerapids       p-bc-[5401-5520]    64   255000    (null)
+standard,a100_1g,mig,cascadelap-gc-3037           48   380000    gpu:a100_1g:14(S:0-11,36-47)
+sc,standard,icelake           p-sc-[2169-2308]    48   512000    (null)
+sc,standard,cascadelake       p-sc-[2001-2156]    48   380000    (null)
+standard,a100,cascadelake     p-gc-[3001-3004,300648   380000    gpu:a100:2(S:0-11,36-47)
+sc,standard,genoa             p-zc-[7001-7035]    64   380000    (null)
+standard,a100_3g,mig,cascadelap-gc-3036           48   380000    gpu:a100_3g:4(S:0-11,36-47)
+standard,a100_3g,a100_1g,cascap-gc-3005           48   380000    gpu:a100_3g:3(S:0-11,36-47),gp
+standard,p100,broadwell       p-gc-[3101-3109,311228   256000+   gpu:p100:1(S:0-13)
+standard,p100,broadwell       p-gc-[3110-3111,311328   256000    gpu:p100:1(S:14-27)
+standard,v100,haswell         p-gc-[3192-3193]    24   256000    gpu:v100:1(S:0-11)
+standard,v100,skylake         p-gc-[3201-3202]    28   770000    gpu:v100:4(S:0-27)
+standard,a40                  p-ic-[4001-4012]    36   500000    gpu:a40:1(S:0-17)
+hc,himem,icelake              p-sc-[2309-2336]    48   1024000   (null)
+ma                            p-cl-0001           20   3045000   (null)
+interactive,p100,broadwell    p-gc-[3161-3176]    28   256000    (null)
+v100s,mri,mgc                 p-mc-[3470-3472]    40   1540000   gpu:v100s:10(S:0-39)
+t4,nih,mgc                    p-mc-[3477-3480]    40   1540000   gpu:t4:16(S:0-39)
+rtx6000,mri,mgc               p-mc-[3473-3474]    40   770000    gpu:rtx_6000:3(S:0-9,20-39)
+v100nv,mri,mgc                p-mc-[3475-3476]    40   770000    gpu:v100:4(S:0-39)
+```
 
 Evidently, node attributes serve to identify nodes with a given
 
 - CPU type (broadwell, haswell, ...)
-- GPU type (a100, g100)
+- GPU type (a100, a40, v100, p100)
 - partition (bc, sc, hc, gc, ic,...)
 - specific hardware combinations (p100_256, 3gc20gb, ...)
 

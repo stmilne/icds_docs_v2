@@ -79,6 +79,9 @@ For more information on hardware requests, see [Hardware requests][hardware].
 [partitions]: ../getting-started/compute-hardware.md#partitions
 [hardware]: hardware-requests.md
 
+For a repository of example batch workflows, go [here][repository].
+[repository]: https://github.com/PSU-ICDS/rc-example-jobs
+
 !!!warning "To use the open queue, use --partition=open"
 	Unpaid jobs under the open queue cannot specify a hardware partition,
 	but will be assigned to available older CPU hardware.

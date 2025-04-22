@@ -40,7 +40,7 @@ and pay whether or not you use the compute time.
 ## Two ways to access 
 
 Roar can be accessed in two ways:  via the web-based Portal <br>
-<https://rcportal.hpc.psu.edu/pun/sys/dashboard> <br>
+<https://portal.hpc.psu.edu/pun/sys/dashboard> <br>
 and by "secure shell" ([`ssh`][ssh]) 
 from a terminal application.
 [ssh]: https://linux.die.net/man/1/ssh

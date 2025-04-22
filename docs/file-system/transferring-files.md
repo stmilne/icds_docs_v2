@@ -28,7 +28,7 @@ The [Portal][portal] top menu under Files/Home
 opens a window that enables convenient file transfer 
 between Roar and your laptop.
 With this utility, small files can be conveniently moved, edited, uploaded, and downloaded. 
-[portal]: https://rcportal.hpc.psu.edu/pun/sys/dashboard
+[portal]: https://portal.hpc.psu.edu/pun/sys/dashboard
 
 Use this method only for moving small (<1 GB) files;
 for larger files, use [Globus](#globus).
@@ -39,14 +39,15 @@ for larger files, use [Globus](#globus).
 
 ## Firefox
 
-The Firefox browser is available 
-from the [Portal Interactive Desktop][portalID].
-From Firefox, you can access OneDrive
-and other similar destinations,
-and upload and download files to Roar.
+With Firefox, you can access OneDrive and other such sites,
+and upload and download files. <br>
+From the [Portal Interactive Desktop][portalID],
+select Web Browser from the Applications menu.
 [portalID]: ../getting-started/connecting.md#portal
 
-From the Interactive Desktop, launch the Web Browser from the Applications menu.
+Firefox is also available via `ssh -X`, after loading its module with 
+`module load firefox`.   
+From the command line, execute `firefox`.
 
 ## Globus
 

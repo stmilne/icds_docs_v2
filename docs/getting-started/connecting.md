@@ -54,9 +54,8 @@ you must install an additional program on your laptop.
 On a Mac, install [XQuartz](https://www.xquartz.org);
 on a PC, install [VcXsrv](https://sourceforge.net/projects/vcxsrv/).
 
-Then, log on with
-option `-X` for "X forwarding":
-<br> `ssh -X <userid>@submit.hpc.psu.edu`
+Then, log on with option `-X` for "X forwarding":
+`ssh -X <userid>@submit.hpc.psu.edu`
 
 When you log on to Roar from off-campus,
 X Window applications can sometimes be slow to update the display;

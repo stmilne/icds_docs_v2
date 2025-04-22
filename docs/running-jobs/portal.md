@@ -7,7 +7,7 @@ and Integrated Developer Environments (IDEs) such as Jupyter and RStudio.
 
 ## Selecting resources
 
-Interactive jobs on the Portal make use of various resources:
+Interactive jobs on the Portal use various resources:
 queue, number and type of nodes, number of cores, memory (RAM), run time.
 For the casual user, the default choices for these resources are sufficient:
 1 node, 4 cores, 64GB, 1 hour, open queue.
@@ -15,13 +15,12 @@ For the casual user, the default choices for these resources are sufficient:
 To pay for your job with [credit account or allocation](../accounts/paying-for-compute.md),
 select it from the Account drop-down menu.
 
-With a credit account, you can choose from the Partition drop-down menu 
-a hardware [partition][partitions] to run your job.
+With a credit account, you can choose a hardware [partition][partitions]
+from the Partition drop-down menu to run your job.
 With an allocation, select "sla-prio" from the Partition menu.
 [partitions]: ../getting-started/compute-hardware.md#partitions
 
 To override the default choices for nodes, cores, memory, and run time,
-or to request a GPU,  
 check the box "Enable advanced Slurm options",
 and type Slurm [resource directives][slurmdir] one per line into the text box, like this:
 [slurmdir]: slurm-scheduler.md#resource-directives
@@ -39,12 +38,12 @@ The Slurm option to request one A40 GPU looks like:
 --gres=gpu:a40:1
 ```
 
-!!! warning "Hardware you request must be compatible with the account you specify.""
+!!! warning "Hardware you request must be compatible with the account you specify."
 	If you ask for high-memory nodes, standard nodes, or GPUs, 
 	you need either a credit account, or a paid allocation 
 	that includes the requested hardware.
 
-!!! warning "All jobs must fit inside the resource limits of the partition they are running on"
+!!! warning "All jobs must fit inside the resource limits of the partition they are running on."
      If resource requests exceed the partition limits, the job will not begin.
 
 - Open queue jobs must not exceed 100 cores and 800 GB memory

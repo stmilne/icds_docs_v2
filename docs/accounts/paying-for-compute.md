@@ -36,19 +36,10 @@ Current prices for credit accounts and allocations are [here][prices].
 
 ## Monitoring usage
 
-For credit accounts:
-
-The `get_balance` command can be used to show credit accounts and current balances.
+The `get_balance` command displays current balances for both credit accounts and allocations.
 To learn how to view details for specific accounts and people, use `get_balance --help`.
 
 !!! warning "Request only the hardware you actually need."
 	Jobs paid for by credit accounts will be charged 
 	for the requested hardware, for the actual runtime of the job,
 	whether or not it is actually used.
-
-For allocations:
-
-The `mybalance` command gives information about allocations.
-For more information, get help with `mybalance -h`.
-
-

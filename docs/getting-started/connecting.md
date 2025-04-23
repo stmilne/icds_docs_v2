@@ -52,7 +52,8 @@ To use any Roar application that "opens a window"
 you must install an additional program on your laptop.
 
 On a Mac, install [XQuartz](https://www.xquartz.org);
-on a PC, install [VcXsrv](https://sourceforge.net/projects/vcxsrv/).
+on a PC, install [VcXsrv](https://sourceforge.net/projects/vcxsrv/)
+or [MobaXterm](https://mobaxterm.mobatek.net/).
 
 Then, log on with option `-X` for "X forwarding":
 `ssh -X <userid>@submit.hpc.psu.edu`
